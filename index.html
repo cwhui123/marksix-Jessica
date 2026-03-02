@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>最近200期六合彩數據面板</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans CJK TC", "PingFang HK", "Microsoft JhengHei", Arial, sans-serif; margin: 1.5rem; color:#222; }
+    h1, h2 { margin: 0.2rem 0 0.6rem; }
+    .btn { display:inline-block; background:#0063B1; color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; }
+    .note { color:#555; font-size:0.9rem; margin-top:0.5rem; }
+    table { border-collapse: collapse; width:100%; margin: 12px 0 24px; }
+    th, td { border:1px solid #ddd; padding:8px; text-align:center; }
+    th { background:#f5f5f5; }
+    .small { font-size: 0.9rem; color: #666; }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 960px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .bar { height: 10px; background:#e6f0ff; position:relative; }
+    .bar > span { position:absolute; left:0; top:0; bottom:0; background:#2B88FF; }
+    /* toolbar + purple button */
+    .actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .actions .left{display:flex;gap:8px}
+    .actions .right{margin-left:auto;display:flex;gap:8px}
+    .btn.alt{background:#6f42c1;color:#fff;margin-left:8px}
+  </style>
+</head>
+<body>
+<h1>最近200期六合彩數據面板</h1>
+<p>數據更新至：26/023（2026-02-28）</p>
+<div class="actions">
+  <div class="left">
+    <a class="btn" href="marksix_latest_200.xlsx" download>⬇️ 下載最近200期結果（.xlsx）</a>
+  </div>
+  <div class="right">
+    <a class="btn alt" href="#bets-widget">輸入 2 膽 → 12 注</a>
+  </div>
+</div>
+<p class="note">備註：以下統計只計 6 個正選號碼，不包括特別號；號碼對為同一期內的無序組合。</p>
+
+<div class="grid">
+  <section>
+    <h2>最近20期：各號碼出現次數（由高至低）</h2>
+    <table>
+      <thead><tr><th>排行</th><th>號碼</th><th>出現次數</th><th>視覺化</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>37</td><td>7</td><td><div class="bar"><span style="width:100%;"></span></div></td></tr>
+        <tr><td>2</td><td>03</td><td>5</td><td><div class="bar"><span style="width:71%;"></span></div></td></tr>
+        <tr><td>3</td><td>06</td><td>5</td><td><div class="bar"><span style="width:71%;"></span></div></td></tr>
+        <tr><td>4</td><td>12</td><td>5</td><td><div class="bar"><span style="width:71%;"></span></div></td></tr>
+        <tr><td>5</td><td>14</td><td>5</td><td><div class="bar"><span style="width:71%;"></span></div></td></tr>
+        <tr><td>6</td><td>24</td><td>5</td><td><div class="bar"><span style="width:71%;"></span></div></td></tr>
+        <tr><td>7</td><td>04</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>8</td><td>09</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>9</td><td>15</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>10</td><td>35</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>11</td><td>38</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>12</td><td>44</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>13</td><td>46</td><td>4</td><td><div class="bar"><span style="width:57%;"></span></div></td></tr>
+        <tr><td>14</td><td>02</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>15</td><td>22</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>16</td><td>23</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>17</td><td>25</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>18</td><td>27</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>19</td><td>28</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>20</td><td>36</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>21</td><td>39</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>22</td><td>42</td><td>3</td><td><div class="bar"><span style="width:42%;"></span></div></td></tr>
+        <tr><td>23</td><td>01</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>24</td><td>13</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>25</td><td>16</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>26</td><td>17</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>27</td><td>18</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>28</td><td>32</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>29</td><td>34</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>30</td><td>47</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>31</td><td>48</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>32</td><td>49</td><td>2</td><td><div class="bar"><span style="width:28%;"></span></div></td></tr>
+        <tr><td>33</td><td>05</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>34</td><td>07</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>35</td><td>08</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>36</td><td>10</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>37</td><td>19</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>38</td><td>20</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>39</td><td>21</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>40</td><td>26</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>41</td><td>30</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>42</td><td>31</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>43</td><td>33</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>44</td><td>40</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+        <tr><td>45</td><td>45</td><td>1</td><td><div class="bar"><span style="width:14%;"></span></div></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>最近50期：同期出現（號碼對）次數排名</h2>
+    <table>
+      <thead><tr><th>排行</th><th>號碼對</th><th>同期出現次數</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>04-26</td><td>4</td></tr>
+        <tr><td>2</td><td>28-37</td><td>4</td></tr>
+        <tr><td>3</td><td>37-39</td><td>4</td></tr>
+        <tr><td>4</td><td>01-09</td><td>3</td></tr>
+        <tr><td>5</td><td>02-04</td><td>3</td></tr>
+        <tr><td>6</td><td>02-10</td><td>3</td></tr>
+        <tr><td>7</td><td>02-13</td><td>3</td></tr>
+        <tr><td>8</td><td>02-28</td><td>3</td></tr>
+        <tr><td>9</td><td>02-37</td><td>3</td></tr>
+        <tr><td>10</td><td>03-24</td><td>3</td></tr>
+        <tr><td>11</td><td>03-37</td><td>3</td></tr>
+        <tr><td>12</td><td>03-39</td><td>3</td></tr>
+        <tr><td>13</td><td>04-46</td><td>3</td></tr>
+        <tr><td>14</td><td>06-28</td><td>3</td></tr>
+        <tr><td>15</td><td>06-34</td><td>3</td></tr>
+        <tr><td>16</td><td>06-38</td><td>3</td></tr>
+        <tr><td>17</td><td>06-39</td><td>3</td></tr>
+        <tr><td>18</td><td>06-44</td><td>3</td></tr>
+        <tr><td>19</td><td>09-17</td><td>3</td></tr>
+        <tr><td>20</td><td>10-28</td><td>3</td></tr>
+      </tbody>
+    </table>
+
+    <div style="height:8px"></div>
+    <h2>最近200期：同期出現（號碼對）次數排名</h2>
+    <table>
+      <thead><tr><th>排行</th><th>號碼對</th><th>同期出現次數</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>17-35</td><td>8</td></tr>
+        <tr><td>2</td><td>22-33</td><td>8</td></tr>
+        <tr><td>3</td><td>03-24</td><td>7</td></tr>
+        <tr><td>4</td><td>03-37</td><td>7</td></tr>
+        <tr><td>5</td><td>05-18</td><td>7</td></tr>
+        <tr><td>6</td><td>06-34</td><td>7</td></tr>
+        <tr><td>7</td><td>11-17</td><td>7</td></tr>
+        <tr><td>8</td><td>16-21</td><td>7</td></tr>
+        <tr><td>9</td><td>17-22</td><td>7</td></tr>
+        <tr><td>10</td><td>17-28</td><td>7</td></tr>
+        <tr><td>11</td><td>18-44</td><td>7</td></tr>
+        <tr><td>12</td><td>19-39</td><td>7</td></tr>
+        <tr><td>13</td><td>19-45</td><td>7</td></tr>
+        <tr><td>14</td><td>20-30</td><td>7</td></tr>
+        <tr><td>15</td><td>21-47</td><td>7</td></tr>
+        <tr><td>16</td><td>25-32</td><td>7</td></tr>
+        <tr><td>17</td><td>26-29</td><td>7</td></tr>
+        <tr><td>18</td><td>29-32</td><td>7</td></tr>
+        <tr><td>19</td><td>33-44</td><td>7</td></tr>
+        <tr><td>20</td><td>36-39</td><td>7</td></tr>
+      </tbody>
+    </table>
+    <p class="small">完整的號碼對列表可於Excel中自行計算或聯絡我們加載更多。</p>
+  </section>
+</div>
+<hr/>
+<p class="small">資料來源：Lottery.hk（公開歷史開獎資料整理）。</p>
+
+<!-- === Lottery 2-dans -> 12 bets widget (self-contained) === -->
+<style>
+  .bets-card{border:1px solid #ddd;border-radius:10px;padding:14px 16px;margin:16px 0;background:#fff}
+  .bets-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .bets-row label{display:flex;gap:6px;align-items:center}
+  .bets-row input[type=number]{width:82px;padding:6px 8px;border:1px solid #ccc;border-radius:6px}
+  .bets-actions{display:flex;gap:8px;margin-top:10px}
+  .bets-actions .btn{background:#0063B1;color:#fff;border:0;border-radius:6px;padding:8px 12px;cursor:pointer}
+  .bets-actions .btn.alt{background:#6f42c1}
+  .bets-actions .btn.ghost{background:#f0f0f0;color:#222}
+  .bets-output{margin-top:12px;font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+  .bets-note{color:#666;font-size:12px;margin-top:6px}
+</style>
+
+<div id="bets-widget" class="bets-card">
+  <div class="bets-row">
+    <label>膽 1：
+      <input id="dan1" type="number" min="1" max="49" placeholder="1–49" required>
+    </label>
+    <label>膽 2：
+      <input id="dan2" type="number" min="1" max="49" placeholder="1–49" required>
+    </label>
+  </div>
+  <div class="bets-actions">
+    <button id="genBtn" class="btn">生成 12 注</button>
+    <button id="copyBtn" class="btn alt">複製全部</button>
+    <button id="csvBtn" class="btn ghost">匯出 CSV</button>
+  </div>
+  <div id="output" class="bets-output"></div>
+  <div class="bets-note">規則：每注包含兩個膽；其餘 4 個由 1–49（排除膽）隨機；12 注不重複；顯示時膽排最後（皆為兩位數）。</div>
+</div>
+
+<script>
+(function(){
+  const pad2 = n => String(n).padStart(2,'0');
+  function shuffle(a){
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]] = [a[j],a[i]];
+    }
+    return a;
+  }
+  const sampleK = (arr, k) => shuffle(arr.slice()).slice(0, k);
+
+  function validateDans(d1, d2){
+    if (!Number.isInteger(d1) || !Number.isInteger(d2)) throw new Error('請輸入整數（1–49）。');
+    if (d1<1 || d1>49 || d2<1 || d2>49) throw new Error('膽必須在 1–49 範圍內。');
+    if (d1 === d2) throw new Error('兩個膽不能重複。');
+  }
+
+  function generate12Bets(d1, d2){
+    validateDans(d1, d2);
+    const danSorted = [d1, d2].sort((a,b)=>a-b);
+    const pool = [];
+    for (let i=1;i<=49;i++){
+      if (i!==d1 && i!==d2) pool.push(i);
+    }
+    const seen = new Set();
+    const bets = [];
+    while (bets.length < 12) {
+      const four = sampleK(pool, 4).sort((a,b)=>a-b);
+      const full6 = [...four, ...danSorted].sort((a,b)=>a-b);
+      const signature = full6.join('-');
+      if (seen.has(signature)) continue;
+      seen.add(signature);
+      const display = `${four.map(pad2).join(' ')} ${danSorted.map(pad2).join(' ')}`;
+      bets.push({ full6, display });
+    }
+    return bets;
+  }
+
+  const $ = id => document.getElementById(id);
+  const genBtn = $('genBtn'), out = $('output'), copyBtn = $('copyBtn'), csvBtn = $('csvBtn');
+
+  function render(bets){
+    // B 款：使用圓形數字，不加句點
+    const circleNumbers = ['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩','⑪','⑫'];
+    const getLabel = (i) => (i < circleNumbers.length ? circleNumbers[i] : `${String(i+1).padStart(2,'0')}.`);
+
+    const lines = bets.map((b, i) => `${getLabel(i)} ${b.display}`);
+    out.textContent = lines.join('\n');
+
+    out.dataset.csv = [
+      ['序號','號碼(升冪顯示，膽最後)'],
+      ...bets.map((b,i)=>[getLabel(i), b.display])
+    ].map(r=>r.map(x=>`"${String(x).replaceAll('"','""')}"`).join(',')).join('\n');
+  }
+
+  genBtn?.addEventListener('click', () =>{
+    try{
+      const d1 = parseInt($('dan1').value,10);
+      const d2 = parseInt($('dan2').value,10);
+      const bets = generate12Bets(d1, d2);
+      render(bets);
+    }catch(e){ alert(e.message); }
+  });
+
+  copyBtn?.addEventListener('click', async () =>{
+    const txt = out.textContent || '';
+    if (!txt.trim()) return alert('目前沒有結果可複製。');
+    try{
+      await navigator.clipboard.writeText(txt);
+      alert('已複製到剪貼簿。');
+    }catch{
+      const ta = document.createElement('textarea');
+      ta.value = txt; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+      alert('已嘗試以相容方式複製。');
+    }
+  });
+
+  csvBtn?.addEventListener('click', () =>{
+    const csv = out.dataset.csv || '';
+    if (!csv.trim()) return alert('目前沒有結果可匯出。');
+    const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = Object.assign(document.createElement('a'), { href: url, download: 'bets_12.csv' });
+    document.body.appendChild(a); a.click(); URL.revokeObjectURL(url); a.remove();
+  });
+})();
+</script>
+<!-- === /widget === -->
+
+</body>
+</html>
