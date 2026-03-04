@@ -32,11 +32,10 @@
     <a class="btn" href="marksix_latest_200.xlsx" download>⬇️ 下載最近200期結果（.xlsx）</a>
   </div>
   <div class="right">
-    <a class="btn alt" href="#bets-widget">輸入 2 膽 → 12 注</a>
+    <a class="btn alt" href="https://cwhui123.github.io/jess/" target="_blank" rel="noopener">輸入 2 膽 → 12 注</a>
   </div>
 </div>
 <p class="note">備註：以下統計只計 6 個正選號碼，不包括特別號；號碼對為同一期內的無序組合。</p>
-
 <div class="grid">
   <section>
     <h2>最近20期：各號碼出現次數（由高至低）</h2>
@@ -91,7 +90,6 @@
       </tbody>
     </table>
   </section>
-
   <section>
     <h2>最近50期：同期出現（號碼對）次數排名</h2>
     <table>
@@ -119,7 +117,6 @@
         <tr><td>20</td><td>10-28</td><td>3</td></tr>
       </tbody>
     </table>
-
     <div style="height:8px"></div>
     <h2>最近200期：同期出現（號碼對）次數排名</h2>
     <table>
@@ -152,7 +149,6 @@
 </div>
 <hr/>
 <p class="small">資料來源：Lottery.hk（公開歷史開獎資料整理）。</p>
-
 <!-- === Lottery 2-dans -> 12 bets widget (self-contained) === -->
 <style>
   .bets-card{border:1px solid #ddd;border-radius:10px;padding:14px 16px;margin:16px 0;background:#fff}
@@ -166,25 +162,9 @@
   .bets-output{margin-top:12px;font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
   .bets-note{color:#666;font-size:12px;margin-top:6px}
 </style>
-
 <div id="bets-widget" class="bets-card">
-  <div class="bets-row">
-    <label>膽 1：
-      <input id="dan1" type="number" min="1" max="49" placeholder="1–49" required>
-    </label>
-    <label>膽 2：
-      <input id="dan2" type="number" min="1" max="49" placeholder="1–49" required>
-    </label>
-  </div>
-  <div class="bets-actions">
-    <button id="genBtn" class="btn">生成 12 注</button>
-    <button id="copyBtn" class="btn alt">複製全部</button>
-    <button id="csvBtn" class="btn ghost">匯出 CSV</button>
-  </div>
-  <div id="output" class="bets-output"></div>
-  <div class="bets-note">規則：每注包含兩個膽；其餘 4 個由 1–49（排除膽）隨機；12 注不重複；顯示時膽排最後（皆為兩位數）。</div>
+<div id="output" class="bets-output"></div>
 </div>
-
 <script>
 (function(){
   const pad2 = n => String(n).padStart(2,'0');
@@ -196,13 +176,11 @@
     return a;
   }
   const sampleK = (arr, k) => shuffle(arr.slice()).slice(0, k);
-
   function validateDans(d1, d2){
     if (!Number.isInteger(d1) || !Number.isInteger(d2)) throw new Error('請輸入整數（1–49）。');
     if (d1<1 || d1>49 || d2<1 || d2>49) throw new Error('膽必須在 1–49 範圍內。');
     if (d1 === d2) throw new Error('兩個膽不能重複。');
   }
-
   function generate12Bets(d1, d2){
     validateDans(d1, d2);
     const danSorted = [d1, d2].sort((a,b)=>a-b);
@@ -223,33 +201,32 @@
     }
     return bets;
   }
-
   const $ = id => document.getElementById(id);
   const genBtn = $('genBtn'), out = $('output'), copyBtn = $('copyBtn'), csvBtn = $('csvBtn');
-
   function render(bets){
-    // B 款：使用圓形數字，不加句點
     const circleNumbers = ['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩','⑪','⑫'];
     const getLabel = (i) => (i < circleNumbers.length ? circleNumbers[i] : `${String(i+1).padStart(2,'0')}.`);
-
     const lines = bets.map((b, i) => `${getLabel(i)} ${b.display}`);
     out.textContent = lines.join('\n');
-
     out.dataset.csv = [
       ['序號','號碼(升冪顯示，膽最後)'],
       ...bets.map((b,i)=>[getLabel(i), b.display])
     ].map(r=>r.map(x=>`"${String(x).replaceAll('"','""')}"`).join(',')).join('\n');
   }
-
   genBtn?.addEventListener('click', () =>{
     try{
-      const d1 = parseInt($('dan1').value,10);
-      const d2 = parseInt($('dan2').value,10);
+      const dan1El = $('dan1');
+      const dan2El = $('dan2');
+      if (!dan1El || !dan2El) {
+        alert('已移除輸入欄位：此功能需要膽 1/膽 2。');
+        return;
+      }
+      const d1 = parseInt(dan1El.value,10);
+      const d2 = parseInt(dan2El.value,10);
       const bets = generate12Bets(d1, d2);
       render(bets);
     }catch(e){ alert(e.message); }
   });
-
   copyBtn?.addEventListener('click', async () =>{
     const txt = out.textContent || '';
     if (!txt.trim()) return alert('目前沒有結果可複製。');
@@ -263,7 +240,6 @@
       alert('已嘗試以相容方式複製。');
     }
   });
-
   csvBtn?.addEventListener('click', () =>{
     const csv = out.dataset.csv || '';
     if (!csv.trim()) return alert('目前沒有結果可匯出。');
@@ -275,6 +251,5 @@
 })();
 </script>
 <!-- === /widget === -->
-
 </body>
 </html>
